@@ -1,0 +1,69 @@
+<jittershader name="color flatten">
+
+    <param name="levels" type="float" default="25.0">
+        <description>
+            The number of divisions in the color channels
+        </description>
+    </param>
+
+    <param name="tex0" type="int" default="0"/>
+
+    <language name="glsl" version="1.2">
+
+        <bind param="levels" program="fp"/>
+        <bind param="tex0" program="fp"/>
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texdim0;
+    varying vec2 texcoord0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+
+]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texdim0;
+    varying vec2 texcoord0;
+
+    uniform float levels;
+
+    uniform sampler2DRect tex0;
+
+    float flatten(float f) {
+
+        float size = 1.0 / levels;
+
+        float level = floor(f / size);
+
+        float newLevel = level * size;
+
+        return newLevel;
+    }
+
+    void main(void) {
+
+        vec4 sample = texture2DRect(tex0, texcoord0);
+
+        vec4 newColor = vec4(flatten(sample.r), flatten(sample.g), flatten(sample.b), 1.0);
+
+        gl_FragColor = newColor;
+    }
+
+]]>
+        </program>
+    </language>
+</jittershader>

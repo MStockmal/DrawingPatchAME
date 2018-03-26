@@ -1,0 +1,67 @@
+<jittershader name="video grid">
+    <param name="gridSize" type="vec2" default="3.0,3.0">
+        <description>
+            The number of tiles in the grid
+        </description>
+    </param>
+
+    <param name="tex0" type="int" default="0" />
+
+    <language name="glsl" version="1.2">
+
+        <bind param="gridSize" program="fp"/>
+        <bind param="tex0" program="fp" />
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    uniform vec2 gridSize;
+
+    uniform sampler2DRect tex0;
+
+    void main(void) {
+
+        //get the size of the tile
+        vec2 tileSize = vec2(texdim0.x / gridSize.x, texdim0.y / gridSize.y);
+
+        //get which tile the pixel is in
+        vec2 tile = vec2(floor(texcoord0.x / tileSize.x), floor(texcoord0.y / tileSize.y));
+
+        //get the normalized position in that tile
+        vec2 normPos = vec2((texcoord0.x - (tile.x * tileSize.x)) / tileSize.x, (texcoord0.y - (tile.y * tileSize.y)) / tileSize.y);
+    
+        //get where in the original texture to sample from 
+        vec2 samplePos = vec2(normPos.x * texdim0.x, normPos.y * texdim0.y);
+
+        //sample
+        vec4 newColor = texture2DRect(tex0, samplePos);
+
+        gl_FragColor = newColor;
+    }
+
+]]>
+        </program>
+    </language>
+</jittershader>

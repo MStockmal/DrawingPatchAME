@@ -1,0 +1,69 @@
+<jittershader name="logarithmic spiral">
+    <description>
+        distorts video along a logarithmic spiral
+    </description>
+
+    <param name="a" type="float" default="1.0"/>
+    <param name="b" type="float" default="1.0"/>
+    <param name="tex0" type="int" default="0"/>
+
+    <language name="glsl" version="1.2">
+
+        <bind param="a" program="fp"/>
+        <bind param="b" program="fp"/>
+        <bind param="tex0" program="fp"/>
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texdim0;
+    varying vec2 texcoord0;
+
+    uniform float a;
+    uniform float b;
+
+    uniform sampler2DRect tex0;
+
+    void main(void) {
+
+        vec2 snormPos = vec2(((texcoord0.x / texdim0.x) * 2) - 1.0, ((texcoord0.y / texdim0.y) * 2) - 1.0);
+
+        float distance = sqrt(pow(snormPos.x, 2) + pow(snormPos.y, 2));
+
+        float theta = (1.0 / b) * log(distance / a);
+
+        //convert to cartesian vec2(rcos(t), rsin(t))
+        vec2 newSnormCoord = vec2(distance * cos(theta), distance * sin(theta));
+
+        vec2 newNormCoord = vec2((newSnormCoord.x + 1) / 2.0, (newSnormCoord.y + 1) / 2.0);
+
+        vec2 samplePos = vec2(newNormCoord * texdim0);
+
+        vec4 sample = texture2DRect(tex0, samplePos);
+
+        gl_FragColor = sample;
+    }
+    
+]]>
+        </program>
+    </language>
+</jittershader>

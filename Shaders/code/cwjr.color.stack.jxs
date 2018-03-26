@@ -1,0 +1,78 @@
+<jittershader name="color stack">
+    <description>
+        Multiplies the value of each color channel by stacks and then uses a fold function to confine the value to the range [0,1]
+    </description>
+
+    <param name="stacks" type="float" default="1.0">
+        <description>
+            How much to multiply the original value by
+        </description>
+    </param>
+
+    <param name="tex0" type="int" default="0"/>
+
+    <language name="glsl" version="1.2">
+
+        <bind param="stacks" program="fp"/>
+        <bind param="tex0" program="fp"/>
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texdim0;
+    varying vec2 texcoord0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    uniform float stacks;
+
+    uniform sampler2DRect tex0;
+
+    float fold(float f) {
+
+        float outputValue = 0.0;
+
+        float direction = floor(f);
+
+        if(mod(direction, 2.0) == 0) { //if even, add from 0
+            outputValue = f - direction;
+        } else { //if odd subtract from 1
+            outputValue = 1.0 - (f - direction);
+        }
+
+        return outputValue;
+    }
+
+    void main(void) {
+
+        //get the current pixel value as a vec4
+        vec4 sample = texture2DRect(tex0, texcoord0);
+
+        //multiply by the stacks value
+        sample = vec4(sample.r * stacks, sample.g * stacks, sample.b * stacks, 1.0);
+
+        //set the folded values as the output values
+        gl_FragColor = vec4(fold(sample.r), fold(sample.g), fold(sample.b), sample.a);
+    }
+]]>
+        </program>
+    </language>
+</jittershader>

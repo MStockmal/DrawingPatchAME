@@ -1,0 +1,86 @@
+<jittershader name="mirror fold">
+    <param name="range" type="vec2" default="0.0,1.0" >
+        <description>
+            The range to fold pixel values into
+        </description>
+    </param>
+
+    <param name="tex0" type="int" default="0" />
+
+    <language name="glsl" version="1.2">
+        <bind param="range" program="fp" />
+        <bind param="tex0" program="fp" />
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+
+]]>
+
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    uniform vec2 range;
+
+    uniform sampler2DRect tex0;
+
+    float fold(float f) {
+
+        float foldOutput = 0.0;
+
+        float direction = floor(f / 1.0);
+
+        if(mod(direction, 2.0) == 0.0) //add from the minimum value
+        {
+            foldOutput = 0.0 + (f - direction);
+        }
+        else //subtract from the maximum
+        {
+            foldOutput = 1.0 - (f - direction);
+        }
+
+        return foldOutput;
+    }
+
+    void main(void) {
+
+        //get the other three points to mirror
+        vec2 mirrorx = vec2(texdim0.x - texcoord0.x, texcoord0.y);
+        vec2 mirrory = vec2(texcoord0.x, texdim0.y - texcoord0.y);
+        vec2 mirrorxy = vec2(mirrorx.x, mirrory.y);
+
+        vec4 sample0 = texture2DRect(tex0, texcoord0);
+        vec4 sample1 = texture2DRect(tex0, mirrorx);
+        vec4 sample2 = texture2DRect(tex0, mirrory);
+        vec4 sample3 = texture2DRect(tex0, mirrorxy);
+
+        sample0 = sample0 + sample1 + sample2 + sample3;
+
+        vec4 outputColor = vec4(fold(sample0.r), fold(sample0.g), fold(sample0.b), 1.0);
+
+        gl_FragColor = outputColor;
+
+    }
+
+]]>
+        </program>
+    </language>
+</jittershader>
