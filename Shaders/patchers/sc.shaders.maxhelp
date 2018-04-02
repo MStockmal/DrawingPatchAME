@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1206.0, 640.0 ],
+		"rect" : [ 396.0, 79.0, 1490.0, 870.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,53 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 777.333313, 824.666687, 216.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.slide @slide_up 400 @slide_down 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "clear", "bang" ],
+					"patching_rect" : [ 770.0, 673.0, 53.0, 22.0 ],
+					"style" : "",
+					"text" : "t clear b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-12",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "sc.matrix.camera.simple.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 136.0, 34.0, 228.0, 222.0 ],
+					"varname" : "sc.matrix.camera.simple",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
@@ -808,7 +855,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 759.333313, 796.166626, 320.0, 240.0 ]
+					"patching_rect" : [ 754.0, 879.666687, 320.0, 240.0 ]
 				}
 
 			}
@@ -853,7 +900,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 800.333313, 698.666626, 40.0, 23.0 ],
+					"patching_rect" : [ 928.333313, 668.0, 40.0, 23.0 ],
 					"style" : "",
 					"text" : "reset"
 				}
@@ -1071,6 +1118,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1488,16 +1536,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
-									"order" : 0,
-									"source" : [ "obj-20", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-82", 0 ],
-									"order" : 1,
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -1511,16 +1550,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
-									"order" : 0,
-									"source" : [ "obj-79", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-82", 0 ],
-									"order" : 1,
 									"source" : [ "obj-79", 0 ]
 								}
 
@@ -1631,7 +1661,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 34.0, 79.0, 1212.0, 640.0 ],
+						"rect" : [ 88.0, 117.0, 1212.0, 640.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1658,7 +1688,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-68",
@@ -2514,7 +2543,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 113.0, 79.0, 750.0, 724.0 ],
+										"rect" : [ 113.0, 109.0, 750.0, 724.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -4206,7 +4235,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 44.0, 79.0, 420.0, 493.0 ],
+										"rect" : [ 43.0, 108.0, 420.0, 493.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 11.0,
@@ -4233,7 +4262,6 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"fontname" : "Arial",
@@ -4268,7 +4296,7 @@
 															"modernui" : 1
 														}
 ,
-														"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+														"rect" : [ 34.0, 78.0, 640.0, 480.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 11.0,
@@ -4445,7 +4473,7 @@
  ]
 																	}
 ,
-																	"patching_rect" : [ 221.0, 125.0, 48.0, 20.0 ],
+																	"patching_rect" : [ 221.0, 125.0, 48.0, 21.0 ],
 																	"saved_object_attributes" : 																	{
 																		"description" : "",
 																		"digest" : "",
@@ -4469,7 +4497,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
-																	"patching_rect" : [ 221.0, 100.0, 78.0, 20.0 ],
+																	"patching_rect" : [ 221.0, 100.0, 78.0, 21.0 ],
 																	"style" : "",
 																	"text" : "jit.fill lookup 0"
 																}
@@ -4484,7 +4512,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "jit_matrix", "" ],
-																	"patching_rect" : [ 221.0, 150.0, 149.0, 20.0 ],
+																	"patching_rect" : [ 221.0, 150.0, 149.0, 21.0 ],
 																	"style" : "",
 																	"text" : "jit.matrix lookup 1 char 256"
 																}
@@ -4499,7 +4527,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "jit_matrix", "" ],
-																	"patching_rect" : [ 50.0, 176.0, 190.0, 20.0 ],
+																	"patching_rect" : [ 50.0, 176.0, 190.0, 21.0 ],
 																	"style" : "",
 																	"text" : "jit.charmap"
 																}
@@ -8501,7 +8529,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 262.0, 79.0, 984.0, 588.0 ],
+						"rect" : [ 262.0, 109.0, 984.0, 588.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -9333,6 +9361,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 951.0, 295.75, 80.0, 35.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 951.0, 295.75, 80.0, 35.0 ],
 					"style" : ""
 				}
 
@@ -9377,31 +9407,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u953001038" ],
 									"dim" : [ 1, 1 ],
-									"engine" : [ "avf" ],
-									"vol" : [ 1.0 ],
-									"automatic" : [ 0 ],
 									"dstrect" : [ 0, 0, 1, 1 ],
-									"usesrcrect" : [ 0 ],
-									"unique" : [ 0 ],
-									"drawto" : [ "" ],
-									"time_secs" : [ 0.0 ],
-									"colormode" : [ "argb" ],
+									"position" : [ 0.0 ],
 									"rate" : [ 1.0 ],
-									"adapt" : [ 1 ],
-									"loopreport" : [ 0 ],
-									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
-									"framereport" : [ 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"texture_name" : [ "u582001036" ],
-									"time" : [ 0 ],
 									"usedstrect" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"moviefile" : [ "" ],
-									"autostart" : [ 1 ],
+									"adapt" : [ 1 ],
+									"vol" : [ 1.0 ],
+									"engine" : [ "avf" ],
+									"time_secs" : [ 0.0 ],
+									"framereport" : [ 0 ],
+									"unique" : [ 0 ],
 									"output_texture" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"looppoints" : [ 0, 0 ],
+									"interp" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"automatic" : [ 0 ],
+									"colormode" : [ "argb" ],
+									"texture_name" : [ "u582001036" ],
 									"loopstart" : [ 0 ],
-									"position" : [ 0.0 ]
+									"time" : [ 0 ],
+									"drawto" : [ "" ],
+									"loopend" : [ 0 ],
+									"moviefile" : [ "" ],
+									"autostart" : [ 1 ]
 								}
 
 							}
@@ -9504,27 +9534,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-16",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "sc.texture.camera.simple.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 726.0, 34.75, 229.0, 244.0 ],
-					"varname" : "sc.texture.camera.simple",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"format" : 6,
 					"id" : "obj-27",
 					"maxclass" : "flonum",
@@ -9534,7 +9543,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 333.0, 439.0, 50.0, 22.0 ],
+					"patching_rect" : [ 300.5, 374.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -9546,7 +9555,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 333.0, 466.0, 43.0, 22.0 ],
+					"patching_rect" : [ 300.5, 401.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "vol $1"
 				}
@@ -9581,40 +9590,77 @@
 			}
 , 			{
 				"box" : 				{
+					"clipheight" : 37.5,
 					"data" : 					{
 						"clips" : [ 							{
-								"filename" : "Gorillaz - Feel Good Inc. (Official Video).mp4",
+								"filename" : "/Users/junshuliu/Downloads/ODESZA - 'Late Night' - Official Video.mp4",
 								"filekind" : "moviefile",
-								"loop" : 1,
+								"loop" : 0,
 								"content_state" : 								{
 									"outputmode" : [ 1 ],
-									"out_name" : [ "u043001020" ],
+									"out_name" : [ "u454000795" ],
 									"dim" : [ 1, 1 ],
-									"engine" : [ "avf" ],
-									"vol" : [ 0.0 ],
-									"automatic" : [ 0 ],
 									"dstrect" : [ 0, 0, 1, 1 ],
-									"usesrcrect" : [ 0 ],
-									"unique" : [ 0 ],
-									"drawto" : [ "" ],
-									"time_secs" : [ 0.0 ],
-									"colormode" : [ "argb" ],
+									"position" : [ 0.0 ],
 									"rate" : [ 1.0 ],
-									"adapt" : [ 1 ],
-									"loopreport" : [ 0 ],
-									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
-									"framereport" : [ 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"texture_name" : [ "u212001018" ],
-									"time" : [ 0 ],
 									"usedstrect" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"moviefile" : [ "" ],
-									"autostart" : [ 1 ],
+									"adapt" : [ 1 ],
+									"vol" : [ 1.0 ],
+									"engine" : [ "avf" ],
+									"time_secs" : [ 0.0 ],
+									"framereport" : [ 0 ],
+									"unique" : [ 0 ],
 									"output_texture" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"looppoints" : [ 0, 0 ],
+									"interp" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"automatic" : [ 0 ],
+									"colormode" : [ "argb" ],
+									"texture_name" : [ "u347000793" ],
 									"loopstart" : [ 0 ],
-									"position" : [ 0.0 ]
+									"time" : [ 0 ],
+									"drawto" : [ "" ],
+									"loopend" : [ 0 ],
+									"moviefile" : [ "" ],
+									"autostart" : [ 1 ]
+								}
+
+							}
+, 							{
+								"filename" : "Gorillaz - Feel Good Inc. (Official Video).mp4",
+								"filekind" : "moviefile",
+								"loop" : 0,
+								"content_state" : 								{
+									"outputmode" : [ 1 ],
+									"out_name" : [ "u454000795" ],
+									"dim" : [ 1, 1 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"position" : [ 0.0 ],
+									"rate" : [ 1.0 ],
+									"usedstrect" : [ 0 ],
+									"adapt" : [ 1 ],
+									"vol" : [ 1.0 ],
+									"engine" : [ "avf" ],
+									"time_secs" : [ 0.0 ],
+									"framereport" : [ 0 ],
+									"unique" : [ 0 ],
+									"output_texture" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"looppoints" : [ 0, 0 ],
+									"interp" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"automatic" : [ 0 ],
+									"colormode" : [ "argb" ],
+									"texture_name" : [ "u347000793" ],
+									"loopstart" : [ 0 ],
+									"time" : [ 0 ],
+									"drawto" : [ "" ],
+									"loopend" : [ 0 ],
+									"moviefile" : [ "" ],
+									"autostart" : [ 1 ]
 								}
 
 							}
@@ -9627,7 +9673,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
 					"output_texture" : 1,
-					"patching_rect" : [ 341.0, 495.0, 150.0, 30.0 ],
+					"patching_rect" : [ 318.0, 459.0, 161.0, 77.0 ],
 					"style" : ""
 				}
 
@@ -9850,6 +9896,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-88", 0 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-93", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
@@ -9873,7 +9926,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-98", 0 ],
-					"midpoints" : [ 809.833313, 733.916626, 768.833313, 733.916626 ],
+					"midpoints" : [ 937.833313, 733.916626, 768.833313, 733.916626 ],
 					"source" : [ "obj-137", 0 ]
 				}
 
@@ -9887,8 +9940,31 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-88", 0 ],
+					"destination" : [ "obj-98", 0 ],
+					"source" : [ "obj-16", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-98", 0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"order" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-79", 0 ],
+					"order" : 1,
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -10333,8 +10409,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-98", 0 ],
-					"midpoints" : [ 769.833313, 749.166626 ],
+					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-93", 0 ]
 				}
 
@@ -10365,60 +10440,44 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"order" : 0,
-					"source" : [ "obj-98", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-79", 0 ],
-					"order" : 1,
+					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-98", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "ODESZA - 'Late Night' - Official Video.mp4",
+				"bootpath" : "~/Downloads",
+				"patcherrelativepath" : "../../../../../Downloads",
+				"type" : "mpg4",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Gorillaz - Feel Good Inc. (Official Video).mp4",
-				"bootpath" : "~/Downloads/Shaders/media",
+				"bootpath" : "~/Documents/GitHub/DrawingPatchAME/Shaders/media",
 				"patcherrelativepath" : "../media",
 				"type" : "mpg4",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.fold.mirror.maxpat",
-				"bootpath" : "~/Downloads/Shaders/patchers",
+				"bootpath" : "~/Documents/GitHub/DrawingPatchAME/Shaders/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sc.texture.camera.simple.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "hflip.genjit",
-				"bootpath" : "~/Documents/Max 7/Packages/SC/code",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "sc.texture.composite.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Max 7/Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bypass_dummy.genjit",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/code",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/code",
+				"patcherrelativepath" : "../../../../Max 7/Packages/SC/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
@@ -10431,35 +10490,35 @@
 , 			{
 				"name" : "sc.texture.slide.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Max 7/Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.texture.presence.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Max 7/Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.texture.leakyintegrator.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Max 7/Packages/SC/patchers/video/texture",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Chicago 4K Drone Footage.mp4",
-				"bootpath" : "~/Downloads",
-				"patcherrelativepath" : "../..",
-				"type" : "mpg4",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.stddev.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../Max 7/Packages/cv.jit/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sc.matrix.camera.simple.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/matrix",
+				"patcherrelativepath" : "../../../../Max 7/Packages/SC/patchers/video/matrix",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -10497,8 +10556,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

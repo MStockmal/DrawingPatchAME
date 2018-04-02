@@ -1,9 +1,9 @@
 {
 	"name" : "Shaders",
 	"version" : 1,
-	"creationdate" : -709883820,
-	"modificationdate" : 3585574371,
-	"viewrect" : [ 2703.0, 309.0, 300.0, 500.0 ],
+	"creationdate" : -709883881,
+	"modificationdate" : 3605525635,
+	"viewrect" : [ 1380.0, 339.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -25,6 +25,11 @@
 ,
 		"media" : 		{
 			"Gorillaz - Feel Good Inc. (Official Video).mp4" : 			{
+				"kind" : "moviefile",
+				"local" : 1
+			}
+,
+			"ODESZA - 'Late Night' - Official Video.mp4" : 			{
 				"kind" : "moviefile",
 				"local" : 1
 			}
@@ -66,6 +71,10 @@
 				"kind" : "shader",
 				"local" : 1
 			}
+
+		}
+,
+		"externals" : 		{
 
 		}
 
