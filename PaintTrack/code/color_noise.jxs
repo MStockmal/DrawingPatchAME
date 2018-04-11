@@ -1,0 +1,95 @@
+<jittershader name="color-noise">
+	<param name="speed" type="float" default="0.5" />
+	<param name="tex0" type="int" default="0" />
+	<param name="time" type="float" default="0.0" />
+	<language name="glsl" version="1.2">
+		<bind param="speed" program="fp" />
+		<bind param="tex0" program="fp" />
+		<bind param="time" program="fp" />
+		<program name="vp" type="vertex">
+<![CDATA[
+
+//based on shader "rainbow noise" by user violetforest on shadertoy.com
+
+#version 120
+
+varying vec2 texdim0;
+varying vec2 texcoord0;
+
+void main(void) {
+	
+	gl_Position = ftransform();
+	
+	texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+	texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+}
+
+]]>
+		</program>
+		<program name="fp" type="fragment">
+<![CDATA[
+
+#version 120
+
+#define OCTAVES 8
+
+varying vec2 texcoord0;
+varying vec2 texdim0;
+
+uniform float speed;
+uniform float time;
+uniform sampler2DRect tex0;
+
+float random(vec2 uv) {
+	return fract(sin(dot(uv.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+}
+
+float noise(vec2 uv) {
+	vec2 i = floor(uv);
+	vec2 f = fract(uv);
+	
+	float a = random(i);
+	float b = random(i + vec2(1.0, 0.0));
+	float c = random(i + vec2(0.0, 1.0));
+	float d = random(i + vec2(1.0, 1.0));
+	
+	vec2 u = f * f * (3.0 - 2.0 * f);
+	
+	return mix(a,b,u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+float fbm(vec2 uv) {
+	float value = 0.0;
+	float amplitude = 0.5;
+	float frequency = 0.0;
+	
+	for(int i = 0; i < OCTAVES; i++) {
+		value += amplitude * noise(uv);
+		uv *= 2.;
+		amplitude *= 0.5;
+	}
+	
+	return value;
+}
+
+void main(void) {
+	
+	//create norm coordinates
+	vec2 uv = texcoord0 / texdim0;
+	
+	//adjust for aspect ratio
+	uv.x *= texdim0.x / texdim0.y;
+	
+	//time varied pixel color
+	vec3 pColor = speed * (0.5 + cos(time + vec3(uv, 0.0) + vec3(0.0,2.0,2.0)));
+	
+	//add noise patter to the color
+	pColor += fbm(uv * atan(3.0));
+	
+	gl_FragColor = vec4(pColor, 1.0);
+}
+
+]]>
+		</program>
+	</language>
+</jittershader>
