@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 443.0, 141.0, 1349.0, 1025.0 ],
+		"rect" : [ 34.0, 79.0, 1372.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -178,17 +178,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-38",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 689.0, 379.0, 80.0, 60.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -258,31 +247,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u016000879" ],
 									"dim" : [ 1, 1 ],
-									"framereport" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"autostart" : [ 1 ],
-									"interp" : [ 0 ],
-									"usesrcrect" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"adapt" : [ 1 ],
-									"texture_name" : [ "u199000877" ],
-									"automatic" : [ 0 ],
-									"time" : [ 0 ],
 									"loopend" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"drawto" : [ "" ],
+									"time" : [ 0 ],
 									"moviefile" : [ "" ],
 									"srcrect" : [ 0, 0, 1, 1 ],
-									"loopreport" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"position" : [ 0.0 ],
 									"rate" : [ 1.0 ],
-									"vol" : [ 1.0 ],
-									"engine" : [ "avf" ],
+									"texture_name" : [ "u199000877" ],
+									"position" : [ 0.0 ],
+									"framereport" : [ 0 ],
 									"time_secs" : [ 0.0 ],
-									"output_texture" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"adapt" : [ 1 ],
+									"vol" : [ 1.0 ],
+									"automatic" : [ 0 ],
+									"engine" : [ "avf" ],
 									"unique" : [ 0 ],
+									"autostart" : [ 1 ],
+									"usedstrect" : [ 0 ],
 									"dstrect" : [ 0, 0, 1, 1 ],
+									"looppoints" : [ 0, 0 ],
+									"output_texture" : [ 0 ],
 									"loopstart" : [ 0 ],
-									"drawto" : [ "" ]
+									"interp" : [ 0 ],
+									"colormode" : [ "argb" ]
 								}
 
 							}
@@ -450,31 +439,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u043001020" ],
 									"dim" : [ 1, 1 ],
-									"framereport" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"autostart" : [ 1 ],
-									"interp" : [ 0 ],
-									"usesrcrect" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"adapt" : [ 1 ],
-									"texture_name" : [ "u212001018" ],
-									"automatic" : [ 0 ],
-									"time" : [ 0 ],
 									"loopend" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"drawto" : [ "" ],
+									"time" : [ 0 ],
 									"moviefile" : [ "" ],
 									"srcrect" : [ 0, 0, 1, 1 ],
-									"loopreport" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"position" : [ 0.0 ],
 									"rate" : [ 1.0 ],
-									"vol" : [ 0.0 ],
-									"engine" : [ "avf" ],
+									"texture_name" : [ "u212001018" ],
+									"position" : [ 0.0 ],
+									"framereport" : [ 0 ],
 									"time_secs" : [ 0.0 ],
-									"output_texture" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"adapt" : [ 1 ],
+									"vol" : [ 0.0 ],
+									"automatic" : [ 0 ],
+									"engine" : [ "avf" ],
 									"unique" : [ 0 ],
+									"autostart" : [ 1 ],
+									"usedstrect" : [ 0 ],
 									"dstrect" : [ 0, 0, 1, 1 ],
+									"looppoints" : [ 0, 0 ],
+									"output_texture" : [ 0 ],
 									"loopstart" : [ 0 ],
-									"drawto" : [ "" ]
+									"interp" : [ 0 ],
+									"colormode" : [ "argb" ]
 								}
 
 							}
@@ -487,7 +476,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
 					"output_texture" : 1,
-					"patching_rect" : [ 239.0, 5.0, 150.0, 30.0 ],
+					"patching_rect" : [ 268.0, 71.0, 150.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -525,7 +514,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "" ],
-					"patching_rect" : [ 17.0, 71.0, 145.0, 22.0 ],
+					"patching_rect" : [ 17.0, 102.0, 145.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.world shaders @fps 60"
 				}
@@ -539,7 +528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 114.0, 41.0, 150.0, 22.0 ],
+					"patching_rect" : [ 113.0, 45.0, 150.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -571,6 +560,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
+					"order" : 0,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"order" : 1,
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -619,16 +617,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-38", 0 ],
-					"order" : 0,
-					"source" : [ "obj-36", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
-					"order" : 1,
 					"source" : [ "obj-36", 0 ]
 				}
 
@@ -736,43 +725,43 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "Gorillaz - Feel Good Inc. (Official Video).mp4",
-				"bootpath" : "~/Documents/Max 7/Projects/shaders/media",
-				"patcherrelativepath" : "../../../Documents/Max 7/Projects/shaders/media",
+				"bootpath" : "~/Documents/Max 7/Projects/DrawingPatchAME/PaintTrack/media",
+				"patcherrelativepath" : "../media",
 				"type" : "mpg4",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.texture.fold.mirror.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.texture.camera.simple.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "hflip.genjit",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/code",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/code",
+				"patcherrelativepath" : "../../../../Packages/SC/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.texture.composite.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bypass_dummy.genjit",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/code",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/code",
+				"patcherrelativepath" : "../../../../Packages/SC/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
@@ -785,14 +774,14 @@
 , 			{
 				"name" : "sc.texture.slide.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sc.texture.presence.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -805,14 +794,14 @@
 , 			{
 				"name" : "sc.texture.roi.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/SC/patchers/video/texture",
-				"patcherrelativepath" : "../../../Documents/Max 7/Packages/SC/patchers/video/texture",
+				"patcherrelativepath" : "../../../../Packages/SC/patchers/video/texture",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "shaders.json",
-				"bootpath" : "~/Downloads/Shaders 3 2",
-				"patcherrelativepath" : "../../Shaders 3 2",
+				"bootpath" : "~/Documents/Max 7/Projects/DrawingPatchAME/PaintTrack/data",
+				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
