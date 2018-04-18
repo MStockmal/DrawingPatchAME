@@ -2,7 +2,7 @@
 	"name" : "PaintTrack",
 	"version" : 1,
 	"creationdate" : 3605698517,
-	"modificationdate" : 3606302963,
+	"modificationdate" : 3606905255,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -12,43 +12,53 @@
 		"patchers" : 		{
 			"sc.shaders.maxhelp" : 			{
 				"kind" : "helpfile",
+				"local" : 1
+			}
+,
+			"wavetable_synth.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1,
 				"singleton" : 				{
-					"bootpath" : "~/Downloads/shaders 2/patchers",
-					"projectrelativepath" : "../../../../Downloads/shaders 2/patchers"
+					"bootpath" : "~/Downloads",
+					"projectrelativepath" : "../../../../../Downloads"
+				}
+
+			}
+,
+			"4_VECTOR_Synthesis.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Desktop",
+					"projectrelativepath" : "../../../../../Desktop"
+				}
+
+			}
+,
+			"3_WAVETABLE_dynamically-variable.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Downloads",
+					"projectrelativepath" : "../../../../../Downloads"
 				}
 
 			}
 ,
 			"sc.shaders1.maxhelp" : 			{
 				"kind" : "helpfile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Downloads/shaders 2/patchers",
-					"projectrelativepath" : "../../../../Downloads/shaders 2/patchers"
-				}
-
+				"local" : 1
 			}
 ,
 			"shader-main.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
-				"toplevel" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Downloads/shaders 2/patchers",
-					"projectrelativepath" : "../../../../Downloads/shaders 2/patchers"
-				}
-
+				"toplevel" : 1
 			}
 ,
 			"color_noise.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Downloads/shaders/patchers",
-					"projectrelativepath" : "../../../../Downloads/shaders/patchers"
-				}
-
+				"local" : 1
 			}
 
 		}
@@ -64,12 +74,7 @@
 		"code" : 		{
 			"color_noise.jxs" : 			{
 				"kind" : "shader",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Downloads/shaders/code",
-					"projectrelativepath" : "../../../../Downloads/shaders/code"
-				}
-
+				"local" : 1
 			}
 
 		}
@@ -83,6 +88,10 @@
 		}
 ,
 		"externals" : 		{
+
+		}
+,
+		"other" : 		{
 
 		}
 
