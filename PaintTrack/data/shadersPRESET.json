@@ -1,0 +1,121 @@
+{
+	"pattrstorage" : 	{
+		"name" : "shaders",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"sc.fold.mirror::drawto" : [ "shaders" ],
+					"sc.texture.camera.simple::texture_name" : [ 0 ],
+					"sc.texture.camera.simple::automatic[1]" : [ 1 ],
+					"sc.texture.camera.simple::unique" : [ 1 ],
+					"sc.texture.camera.simple::hflip" : [ 1.0 ],
+					"sc.texture.composite::co" : [ 23 ],
+					"sc.texture.composite::bypass" : [ 0.0 ],
+					"sc.texture.composite::amount" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"sc.texture.slide::slide_up" : [ 0.0 ],
+					"sc.texture.slide::slide_down" : [ 250.0 ],
+					"sc.texture.slide::bypass" : [ 0.0 ],
+					"sc.texture.presence::threshold" : [ 0.09 ],
+					"sc.texture.presence::bypass" : [ 0.0 ],
+					"sc.texture.presence::blur" : [ 3.905, 3.905 ],
+					"sc.texture.presence::memory" : [ 0.9 ],
+					"sc.texture.presence::lpf" : [ 1.0 ],
+					"sc.texture.opflow::diff_thresh" : [  ],
+					"sc.texture.opflow::opflow_thresh" : [  ],
+					"sc.texture.opflow::opflow_lambda" : [  ],
+					"sc.texture.opflow::opflow_force" : [  ],
+					"sc.texture.opflow::offset" : [  ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"sc.fold.mirror::drawto" : [ "shaders" ],
+					"sc.texture.camera.simple::texture_name" : [ 0 ],
+					"sc.texture.camera.simple::automatic[1]" : [ 1 ],
+					"sc.texture.camera.simple::unique" : [ 1 ],
+					"sc.texture.camera.simple::hflip" : [ 1.0 ],
+					"sc.texture.composite::co" : [ 23 ],
+					"sc.texture.composite::bypass" : [ 0.0 ],
+					"sc.texture.composite::amount" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"sc.texture.slide::slide_up" : [ 0.0 ],
+					"sc.texture.slide::slide_down" : [ 0.0 ],
+					"sc.texture.slide::bypass" : [ 0.0 ],
+					"sc.texture.presence::threshold" : [ 0.09 ],
+					"sc.texture.presence::bypass" : [ 0.0 ],
+					"sc.texture.presence::blur" : [ 3.905, 3.905 ],
+					"sc.texture.presence::memory" : [ 0.9 ],
+					"sc.texture.presence::lpf" : [ 1.0 ],
+					"sc.texture.opflow::diff_thresh" : [  ],
+					"sc.texture.opflow::opflow_thresh" : [  ],
+					"sc.texture.opflow::opflow_lambda" : [  ],
+					"sc.texture.opflow::opflow_force" : [  ],
+					"sc.texture.opflow::offset" : [  ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"data" : 				{
+					"sc.fold.mirror::drawto" : [ "shaders" ],
+					"sc.texture.camera.simple::texture_name" : [ 0 ],
+					"sc.texture.camera.simple::automatic[1]" : [ 1 ],
+					"sc.texture.camera.simple::unique" : [ 1 ],
+					"sc.texture.camera.simple::hflip" : [ 0.0 ],
+					"sc.texture.composite::co" : [ 23 ],
+					"sc.texture.composite::bypass" : [ 0.0 ],
+					"sc.texture.composite::amount" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"sc.texture.slide::slide_up" : [ 10.0 ],
+					"sc.texture.slide::slide_down" : [ 200.0 ],
+					"sc.texture.slide::bypass" : [ 0.0 ],
+					"sc.texture.presence::threshold" : [ 0.05 ],
+					"sc.texture.presence::bypass" : [ 0.0 ],
+					"sc.texture.presence::blur" : [ 3.905, 3.905 ],
+					"sc.texture.presence::memory" : [ 0.9 ],
+					"sc.texture.presence::lpf" : [ 1.0 ],
+					"sc.texture.opflow::diff_thresh" : [ 0.0 ],
+					"sc.texture.opflow::opflow_thresh" : [ 0.0 ],
+					"sc.texture.opflow::opflow_lambda" : [ 0.03 ],
+					"sc.texture.opflow::opflow_force" : [ 1.0 ],
+					"sc.texture.opflow::offset" : [ 3.0, 3.0 ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"data" : 				{
+					"sc.fold.mirror::drawto" : [ "shaders" ],
+					"sc.texture.camera.simple::texture_name" : [ 0 ],
+					"sc.texture.camera.simple::automatic[1]" : [ 1 ],
+					"sc.texture.camera.simple::unique" : [ 1 ],
+					"sc.texture.camera.simple::hflip" : [ 0.0 ],
+					"sc.texture.composite::co" : [ 23 ],
+					"sc.texture.composite::bypass" : [ 0.0 ],
+					"sc.texture.composite::amount" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"sc.texture.slide::slide_up" : [ 0.01 ],
+					"sc.texture.slide::slide_down" : [ 150.0 ],
+					"sc.texture.slide::bypass" : [ 0.0 ],
+					"sc.texture.presence::threshold" : [ 0.05 ],
+					"sc.texture.presence::bypass" : [ 0.0 ],
+					"sc.texture.presence::blur" : [ 3.905, 3.905 ],
+					"sc.texture.presence::memory" : [ 0.9 ],
+					"sc.texture.presence::lpf" : [ 1.0 ],
+					"sc.texture.opflow::diff_thresh" : [ 0.0 ],
+					"sc.texture.opflow::opflow_thresh" : [ 0.0 ],
+					"sc.texture.opflow::opflow_lambda" : [ 0.03 ],
+					"sc.texture.opflow::opflow_force" : [ 1.0 ],
+					"sc.texture.opflow::offset" : [ 3.0, 3.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
