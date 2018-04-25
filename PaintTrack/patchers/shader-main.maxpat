@@ -159,7 +159,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1110.5, 816.0, 60.0, 22.0 ],
 					"style" : "",
-					"text" : "0.000014"
+					"text" : "0.000207"
 				}
 
 			}
@@ -503,7 +503,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 293.5, 770.0, 50.0, 35.0 ],
 					"style" : "",
-					"text" : "0.028164"
+					"text" : "2.176649"
 				}
 
 			}
@@ -536,13 +536,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 946.5, 745.0, 50.0, 22.0 ],
+					"patching_rect" : [ 946.5, 745.0, 50.0, 35.0 ],
 					"style" : "",
-					"text" : "0."
+					"text" : "0.000386"
 				}
 
 			}
@@ -775,31 +776,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u016000879" ],
 									"dim" : [ 1, 1 ],
+									"autostart" : [ 1 ],
+									"position" : [ 0.0 ],
+									"texture_name" : [ "u199000877" ],
+									"vol" : [ 1.0 ],
 									"engine" : [ "avf" ],
 									"looppoints" : [ 0, 0 ],
 									"loopstart" : [ 0 ],
-									"interp" : [ 0 ],
+									"unique" : [ 0 ],
+									"adapt" : [ 1 ],
 									"dstrect" : [ 0, 0, 1, 1 ],
 									"loopend" : [ 0 ],
 									"usesrcrect" : [ 0 ],
 									"usedstrect" : [ 0 ],
-									"time" : [ 0 ],
-									"moviefile" : [ "" ],
+									"interp" : [ 0 ],
+									"output_texture" : [ 0 ],
 									"drawto" : [ "" ],
 									"rate" : [ 1.0 ],
 									"colormode" : [ "argb" ],
-									"output_texture" : [ 0 ],
-									"position" : [ 0.0 ],
+									"time" : [ 0 ],
 									"srcrect" : [ 0, 0, 1, 1 ],
 									"time_secs" : [ 0.0 ],
 									"loopreport" : [ 0 ],
-									"vol" : [ 1.0 ],
-									"adapt" : [ 1 ],
+									"moviefile" : [ "" ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"texture_name" : [ "u199000877" ]
+									"automatic" : [ 0 ]
 								}
 
 							}
@@ -967,31 +968,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u043001020" ],
 									"dim" : [ 1, 1 ],
+									"autostart" : [ 1 ],
+									"position" : [ 0.0 ],
+									"texture_name" : [ "u212001018" ],
+									"vol" : [ 0.0 ],
 									"engine" : [ "avf" ],
 									"looppoints" : [ 0, 0 ],
 									"loopstart" : [ 0 ],
-									"interp" : [ 0 ],
+									"unique" : [ 0 ],
+									"adapt" : [ 1 ],
 									"dstrect" : [ 0, 0, 1, 1 ],
 									"loopend" : [ 0 ],
 									"usesrcrect" : [ 0 ],
 									"usedstrect" : [ 0 ],
-									"time" : [ 0 ],
-									"moviefile" : [ "" ],
+									"interp" : [ 0 ],
+									"output_texture" : [ 0 ],
 									"drawto" : [ "" ],
 									"rate" : [ 1.0 ],
 									"colormode" : [ "argb" ],
-									"output_texture" : [ 0 ],
-									"position" : [ 0.0 ],
+									"time" : [ 0 ],
 									"srcrect" : [ 0, 0, 1, 1 ],
 									"time_secs" : [ 0.0 ],
 									"loopreport" : [ 0 ],
-									"vol" : [ 0.0 ],
-									"adapt" : [ 1 ],
+									"moviefile" : [ "" ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"texture_name" : [ "u212001018" ]
+									"automatic" : [ 0 ]
 								}
 
 							}
